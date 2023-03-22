@@ -1,0 +1,117 @@
+@import "./mixins";
+@import "./variables";
+@import "./css-resets.scss";
+
+.Start {
+  height: 100vh;
+  width: 100vw;
+  background-color: #181818;
+  @include zentrieren(center,center,column);
+
+  .PersonHeads {
+    height: 30%;
+    width: 50%;
+    @include zentrieren(space-evenly,center,row);
+
+    .PersonHead {
+      font-size: 72px;
+      color: $secondary-color;
+      transition: color 0.2s ease-in-out;
+    }
+    @media screen and (max-width : 1200px) {
+      width: 100%;
+  
+    }
+  }
+
+  .StartButton {
+    position: relative;
+    width: 200px;
+    height: 60px;
+    background-color: $secondary-color;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    border-radius: 10px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+    cursor: pointer;
+
+    &:active {
+      background-color: darken($secondary-color, 10%);
+      /* dunkleres Blau bei Hover */
+      transform: scale(0.95);
+    }
+  }
+}
+
+.StartButton:disabled {
+  transform: scale(1) !important;
+}
+
+.LoadingAnimation {
+  position: relative;
+  width: 200px;
+  height: 60px;
+  background-color: $secondary-color;
+  /* blau */
+  color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  border-radius: 10px;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    background-color: darken($secondary-color, 10%);
+    /* dunkleres Blau bei Hover */
+    transform: scale(1.05);
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: $secondary-color;
+    color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    border-radius: 10px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+    background-color: rgb(0, 1, 75);
+    animation: SlideRight 3s forwards;
+
+    @keyframes SlideRight {
+      from {
+        right: 100%;
+      }
+
+      to {
+        right: 0;
+      }
+    }
+  }
+}

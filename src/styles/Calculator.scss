@@ -1,0 +1,62 @@
+@import "./mixins";
+@import "./variables";
+@import "./css-resets.scss";
+
+.Calculator {
+    position: relative;
+    width: 100%;
+    height: 60%;
+    text-align: center;
+    @include schrift(white, x-large, bolder);
+    @include umrandung;
+    background: $UntererBereich;
+
+    td {
+        background-color: rgb(3, 22, 63);
+        border: 1px double $BorderGrau;
+        width: calc(100% / 3);
+        border-radius: 10px;
+        transition: transform 0.2s ease-in-out;
+
+        &:active:not(#Output) {
+            transform: scale(0.95);
+        }
+
+        &:not(#Output) {
+            cursor: pointer;
+
+        }
+    }
+}
+
+.Hide {
+    color: transparent;
+    text-shadow: none;
+}
+
+#Output {
+    position: relative;
+}
+
+.CalcCount {
+    max-width: 80%;
+    height: 100%;
+    @include zentrieren(center, center, column);
+}
+
+#DeleteLast {
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    height: 100%;
+    width: 75%;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+
+    &:active {
+        transform: scale(0.95);
+        color: rgb(104, 0, 22);
+        transition: color 0.2s ease-out;
+        /* add this line */
+    }
+}

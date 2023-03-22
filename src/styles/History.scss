@@ -1,0 +1,47 @@
+@import "./mixins";
+@import "./variables";
+@import "./css-resets.scss";
+
+.HistoryWrapper {
+    height: 60%;
+    width: 100%;
+    background-color: rgba(3, 22, 63, 0.801);
+}
+
+.SelectHistory {
+    height: 20%;
+    width: 100%;
+    @include zentrieren(space-evenly, center, row);
+    @include schrift(white, x-large, bolder);
+    @include umrandung;
+
+}
+
+.DisplayHistory {
+    height: 80%;
+    width: 100%;
+    font-size: x-large;
+    list-style-type: none;
+    overflow-y: scroll;
+    @include umrandung;
+    background-color: rgba(3, 22, 63, 0.801);
+
+    li {
+        padding: 10%;
+        width: 100%;
+        border-bottom: 1px double rgba(255, 255, 255, 0.466);
+    }
+}
+
+.OptionHistory {
+    width: 100%;
+    height: 100%;
+    @include zentrieren(center, center, column);
+    cursor: pointer;
+    background-color: rgba(37, 37, 37, 0.7);
+}
+
+.ActiveHistory {
+    background-color: rgba(24, 24, 24, 0.89) !important;
+    transition: background-color 250ms;
+}

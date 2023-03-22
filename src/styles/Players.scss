@@ -1,0 +1,95 @@
+@import "./mixins";
+@import "./variables";
+@import "./css-resets.scss";
+
+.Players {
+    height: 40%;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, .8), rgba(3, 3, 46, 0.5));
+    @include zentrieren(space-evenly, center, row);
+    @include umrandung;
+    @include schrift(rgb(255, 225, 0), 48px, bolder);
+}
+
+.Player1,
+.Player2 {
+    @include zentrieren(center, center, column);
+    width: 50%;
+    height: 50%;
+}
+
+.HealthStatus {
+    height: 60%;
+    @include zentrieren(center, center, column);
+}
+
+.PlayerOptions {
+    @include zentrieren(space-evenly, center, row);
+    width: 100%;
+    height: 50%;
+}
+
+.PlusHealth,
+.MinusHealth {
+    width: 25%;
+    cursor: pointer;
+    height: 100%;
+    font-size: 72px;
+    @include zentrieren(center, center, column);
+}
+
+.lowlife {
+    color: rgb(255, 132, 39) !important;
+    transition: color 5s;
+
+}
+
+.verylowlife {
+    color: rgb(255, 0, 0) !important;
+    transition: color 5s;
+}
+
+.Timer {
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    color: white;
+    @include zentrieren(center, center, row);
+
+    .StartTimer {
+        @include zentrieren(center, center, column);
+    }
+    .Time {
+        @include zentrieren(center, center, row);
+
+        margin-left: 5px;
+        margin-right: 5px;
+
+        #Hours {}
+
+        #Minutes {}
+
+        #Seconds {}
+    }
+}
+
+hr {
+    border: rgb(255, 255, 255) solid 1px;
+    filter: blur(2px);
+}
+
+.SoundOnOff {
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    @include zentrieren(center, center, row);
+}
+
+.SoundOn {
+    position: absolute;
+    right: 10%;
+    color: white;
+    font-size: x-large;
+    cursor: pointer;
+    z-index: 1000;
+}
