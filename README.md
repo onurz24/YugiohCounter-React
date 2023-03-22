@@ -13,7 +13,9 @@ Features :
 
 Game Demo : https://onuryugioh.netlify.app/  
 
-npm run build for production build / deployment version. Host for free on Netlify. Drag and Drop folder.
+npm start for running locally.
+npm run build for production build / deployment version. 
+Host for free on Netlify. Drag and Drop folder.
 
 
 
