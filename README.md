@@ -1,3 +1,25 @@
+Yugioh Lifepoints Counter, useful features.
+Very Old Project, no clean code but works fine.
+Only Copyright free Images and Sound Effects. 
+Repsonsive, Mobile,Tablet,Pc. 
+Add to Homescreen for Fullscreen. 
+Features : 
+- Decides Who begins the Duel 
+- Displays Lifepoints, increase or decrease 
+- Track Lifepoints 
+- History Build in Timer with Pause 
+- Build in Coin flipper or Dice roll
+- Manage Game Tokens or Counters Restart
+
+Game Demo : https://onuryugioh.netlify.app/  
+
+npm run build for production build / deployment version. Host for free on Netlify. Drag and Drop folder.
+
+
+
+
+
+
 # Getting Started with Create React App and Redux
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
